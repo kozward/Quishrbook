@@ -1,0 +1,214 @@
+/*Theme Name: Quishrbook
+Theme URI: Yquishrbook.com
+Description: Coffee note taking application
+Version: 1.0
+Author: Kevin Chang
+Author URI: kvchang.com
+*/
+
+body {
+	-webkit-font-smoothing: antialiased;
+	background: #ececec;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 24px;
+	color: #444;
+	font-family: Roboto, sans-serif;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 24px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+#site-header {
+	box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
+	background: #FFAF48;
+	height: 112px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+header .title {
+	color: #fff;
+	font-size: 18px;
+	font-family: Roboto Mono, monospace;
+	line-height: 64px;
+	padding: 0 60px;
+}
+
+#filterPanel {
+	height: 48px;
+	background: #FAF9F9;
+}
+
+#titlerow .td {
+	font-family: Roboto Mono, monospace;
+	font-size: 12px;
+	line-height: 48px;
+	color: #929292;
+}
+
+.table {
+	width: 100%;
+}
+
+.td {
+	display: inline-block;
+}
+
+.table .tr {
+	position: relative !important;
+}
+
+.table .td {
+	position: relative;
+}
+
+.td.coffee { width: 38%; }
+.td.method { width: 11%; }
+.td.grounds { width: 17%; }
+.td.water { width: 8%; }
+.td.time { width: 8%; }
+.td.maker { width: 14%; }
+
+.grid-wrapper {
+	min-width: 1280px;
+	padding: 0 60px;
+}
+
+#main-table {
+	font-size: 14px;
+	margin-top: 112px;
+}
+
+#main-table .td {
+	line-height: 64px;
+	cursor: pointer;
+}
+
+.coffee-roaster, .unit {
+	color: #AAB1B9;
+}
+
+.coffee-row {
+	background: #fff;
+	box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
+}
+
+/* Modal style */
+
+.themodal-lock {
+	/* when modal is opened we're removing scrollbars from the main content */
+	overflow: hidden;
+}
+
+.themodal-overlay {
+	/* overlay will stay fixed and will take all the space available */
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 200;
+
+	/* if modal content doesn't fit inside the overlay, display scrollbars */
+	overflow: auto;
+
+	/* allow one-finger iPad scrolling */
+	-webkit-overflow-scrolling: touch;
+
+}
+
+/* fix for iPad glitches */
+.themodal-overlay > * {
+	-webkit-transform: translateZ(0px);
+}
+
+.themodal-overlay {
+	background: rgba(0, 0, 0, 0.6);
+	/* IE6–IE8 */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = #7F000000, endColorstr = #7F000000);
+	zoom: 1;
+}
+
+#coffee-detail {
+	width: 500px;
+	margin: 6% auto;
+	background: #fff;
+	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+}
+
+#detail-header {
+	padding: 24px;
+	border-bottom: 1px solid #DADADA;
+}
+
+.detail-coffee {
+	font-size: 21px;
+	line-height: 28px;
+}
+
+.detail-roaster {
+	color: #AAB1B9;
+	margin-top: 4px;
+}
+
+.detail-group {
+	margin-top: 24px;
+}
+
+.group-item {
+	display: inline-block;
+	width: 200px;
+	margin-top: 16px;
+}
+
+.group-item .material-icons {
+	vertical-align: middle;
+	color: #FFAF48;
+}
+
+.group-item .group-item-method {
+	display: inline-block;
+	margin-left: 16px;
+	vertical-align: middle;
+}
+
+#detail-content {
+	padding: 24px;
+}
+
+#detail-author {
+	padding: 24px;
+}
+
+.author-profile {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.author-info {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 16px;
+}
+
+.author-name {
+}
+
+.post-time {
+	font-size: 14px;
+	color: #AAB1B9;
+}
