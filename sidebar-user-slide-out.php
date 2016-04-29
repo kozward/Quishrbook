@@ -13,7 +13,7 @@
 	</header>
 	<div id="slide-out-content">
 		<div class="coffee-stats">
-			<div class="title">My coffee stats</div>
+			<div class="title">My top coffee method</div>
 			<div class="stat-item">
 				<div class="stat-title">Espresso (12/35)</div>
 				<div class="stat-bar"></div>

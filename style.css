@@ -222,18 +222,18 @@ header .title {
 }
 
 #slide-out {
-	width: 300px;
+	width: 320px;
 	height: 100%;
 	background: #FFFFFF;
 	position: fixed;
 	top: 0;
-	left: -300px;
+	left: -320px;
 	z-index: 999;
 	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 }
 
 #slide-out-header {
-	width: 300px;
+	width: 320px;
 	height: 200px;
 	background: url(assets/user-background/slide-out-bg.png);
 	background-size: cover;
@@ -299,5 +299,10 @@ header .title {
 	position: absolute;
 	top: 20px;
 	left: 16px;
-	color: #FFFFFF;
+	color: rgba(255,255,255,.87);
+	cursor: pointer;
+}
+
+#open-user-panel:hover {
+	color: rgba(255,255,255,1);
 }

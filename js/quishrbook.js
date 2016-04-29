@@ -30,7 +30,7 @@ jQuery(function($){
 
 	$('body').on('click', '.themodal-overlay', function(e){
 		$('#slide-out').animate({
-			left: "-300px"
+			left: "-320px"
 		}, 200);
 		$('.themodal-overlay').remove();
 		$('body').removeClass('themodal-lock');
