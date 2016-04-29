@@ -62,4 +62,6 @@
 	</div> -->
 </div>
 
+<?php get_sidebar('user-slide-out'); ?>
+
 <?php get_footer(); ?>

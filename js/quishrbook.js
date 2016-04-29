@@ -17,4 +17,23 @@ jQuery(function($){
 		$.modal().close();
 	});
 
+	// open user slide out panel
+	$('#open-user-panel').click(function(e){
+		e.preventDefault();
+		$('#slide-out').animate({
+			left: "0px"
+		}, 200);
+		var overlay = $('<div/>').addClass('themodal-overlay').prependTo('body');
+		overlay.fadeIn();
+		$('body').addClass('themodal-lock');
+	});
+
+	$('body').on('click', '.themodal-overlay', function(e){
+		$('#slide-out').animate({
+			left: "-300px"
+		}, 200);
+		$('.themodal-overlay').remove();
+		$('body').removeClass('themodal-lock');
+	});
+
 });

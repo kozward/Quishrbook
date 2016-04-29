@@ -17,6 +17,7 @@
 <body>
 	<header id="site-header">
 		<div id="sticky">
+			<a id="open-user-panel"><i class="material-icons">menu</i></a>
 			<div class="title">Quishrbook</div>
 			<div id="filterPanel">
 				<div class="table" id="titlerow">
