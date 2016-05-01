@@ -28,10 +28,11 @@
 					}
 
 					$method_count = array_count_values($my_methods);
+					$top_methods = array_slice($method_count, 0, 3);
 					$total_entry = array_sum($method_count);
-					arsort($method_count);
+					arsort($top_methods);
 
-					foreach ($method_count as $key => $value) {
+					foreach ($top_methods as $key => $value) {
 						echo '
 						<div class="stat-item">
 							<div class="stat-titel">'.$key.'</div>
