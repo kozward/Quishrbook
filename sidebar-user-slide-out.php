@@ -14,7 +14,35 @@
 	<div id="slide-out-content">
 		<div class="coffee-stats">
 			<div class="title">My top coffee method</div>
-			<div class="stat-item">
+
+			<?php 
+				if ( is_user_logged_in() ) {
+					$user_id = get_current_user_id();
+					$query = new WP_Query( array( 'author' => $user_id, 'meta_key' => 'Method') );
+   					$posts = $query->get_posts();
+   					$my_methods = array();
+
+   					foreach($posts as $post) {
+						$method = get_post_meta($post->ID, 'Method', true);
+						array_push($my_methods, $method);
+					}
+
+					$method_count = array_count_values($my_methods);
+					$total_entry = array_sum($method_count);
+					arsort($method_count);
+
+					foreach ($method_count as $key => $value) {
+						echo '
+						<div class="stat-item">
+							<div class="stat-titel">'.$key.'</div>
+							<div class="stat-bar-bg" data-count='.$value/$total_entry.'><div class="stat-bar"></div></div>
+						</div>
+						';
+					}
+				}
+			?>
+
+			<!-- <div class="stat-item">
 				<div class="stat-title">Espresso (12/35)</div>
 				<div class="stat-bar"></div>
 			</div>
@@ -29,7 +57,7 @@
 			<div class="stat-item">
 				<div class="stat-title">Others</div>
 				<div class="stat-bar"></div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>

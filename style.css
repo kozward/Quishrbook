@@ -264,6 +264,7 @@ header .title {
 
 #slide-out-content .title {
 	font-size: 12px;
+	margin-bottom: 8px;
 	color: #CCCCCC;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -277,19 +278,19 @@ header .title {
 	margin-bottom: 4px;
 }
 
-.stat-bar {
+.stat-bar-bg {
 	height: 8px;
 	width: 100%;
 	background: #EEEEEE;
 	position: relative;
 }
 
-.stat-bar::after {
+.stat-bar {
 	content: "";
 	display: block;
 	height: 8px;
 	background: #FFAF48;
-	width: 43%;
+	width: 0%;
 	position: absolute;
 	top: 0;
 	left: 0;

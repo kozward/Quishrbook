@@ -26,6 +26,12 @@ jQuery(function($){
 		var overlay = $('<div/>').addClass('themodal-overlay').prependTo('body');
 		overlay.fadeIn();
 		$('body').addClass('themodal-lock');
+		$('.stat-bar-bg').each(function(e){
+			var percentage = Math.floor($(this).attr('data-count') * 100).toString() + '%';
+			$('.stat-bar-bg').find('.stat-bar').delay(200).animate({
+				width: percentage
+			}, 200);
+		});
 	});
 
 	$('body').on('click', '.themodal-overlay', function(e){
@@ -34,6 +40,11 @@ jQuery(function($){
 		}, 200);
 		$('.themodal-overlay').remove();
 		$('body').removeClass('themodal-lock');
+		$('.stat-bar-bg').each(function(e){
+			$('.stat-bar-bg').find('.stat-bar').delay(200).animate({
+				width: '0%'
+			}, 200);
+		});
 	});
 
 });
