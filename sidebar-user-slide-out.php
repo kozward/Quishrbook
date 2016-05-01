@@ -6,7 +6,7 @@
 <div id="slide-out">
 	<header id="slide-out-header">
 		<div class="user-basic">
-			<?php echo get_avatar( get_the_author_meta( 'ID' ), 48 ); ?>
+			<?php echo get_avatar( get_the_author_meta( get_current_user_id() ), 48 ); ?>
 			<div class="name"><?php echo $current_user->user_login; ?></div>
 			<div class="email"><?php echo $current_user->user_email; ?></div>
 		</div>
@@ -28,10 +28,11 @@
 					}
 
 					$method_count = array_count_values($my_methods);
+					$top_methods = array_slice($method_count, 0, 3);
 					$total_entry = array_sum($method_count);
-					arsort($method_count);
+					arsort($top_methods);
 
-					foreach ($method_count as $key => $value) {
+					foreach ($top_methods as $key => $value) {
 						echo '
 						<div class="stat-item">
 							<div class="stat-titel">'.$key.'</div>
