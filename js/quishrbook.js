@@ -28,7 +28,7 @@ jQuery(function($){
 		$('body').addClass('themodal-lock');
 		$('.stat-bar-bg').each(function(e){
 			var percentage = Math.floor($(this).attr('data-count') * 100).toString() + '%';
-			$('.stat-bar-bg').find('.stat-bar').delay(200).animate({
+			$(this).find('.stat-bar').delay(200).animate({
 				width: percentage
 			}, 200);
 		});
