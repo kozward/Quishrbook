@@ -7,7 +7,7 @@
 	<header id="slide-out-header">
 		<div class="user-basic">
 			<?php echo get_avatar( $current_user->user_email, 48 ); ?>
-			<div class="name"><?php echo $current_user->user_login; ?></div>
+			<div class="name"><?php echo $current_user->user_firstname; ?> <?php echo $current_user->user_lastname; ?></div>
 			<div class="email"><?php echo $current_user->user_email; ?></div>
 		</div>
 	</header>
