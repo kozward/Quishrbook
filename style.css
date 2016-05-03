@@ -113,6 +113,14 @@ header .title {
 	box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
 }
 
+.coffee-row:hover {
+	background: #F5F5F5;
+}
+
+.coffee-row:active {
+	background: #F1F1F1;
+}
+
 /* Modal style */
 
 .themodal-lock {
