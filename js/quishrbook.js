@@ -23,7 +23,7 @@ jQuery(function($){
 		$('#slide-out').animate({
 			left: "0px"
 		}, 200);
-		var overlay = $('<div/>').addClass('themodal-overlay').prependTo('body');
+		var overlay = $('<div/>').addClass('thepanel-overlay').prependTo('body');
 		overlay.fadeIn();
 		$('body').addClass('themodal-lock');
 		$('.stat-bar-bg').each(function(e){
@@ -34,11 +34,11 @@ jQuery(function($){
 		});
 	});
 
-	$('body').on('click', '.themodal-overlay', function(e){
+	$('body').on('click', '.thepanel-overlay', function(e){
 		$('#slide-out').animate({
 			left: "-320px"
 		}, 200);
-		$('.themodal-overlay').remove();
+		$('.thepanel-overlay').remove();
 		$('body').removeClass('themodal-lock');
 		$('.stat-bar-bg').each(function(e){
 			$('.stat-bar-bg').find('.stat-bar').delay(200).animate({
