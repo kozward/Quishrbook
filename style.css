@@ -120,7 +120,7 @@ header .title {
 	overflow: hidden;
 }
 
-.themodal-overlay {
+.themodal-overlay, .thepanel-overlay {
 	/* overlay will stay fixed and will take all the space available */
 	position: fixed;
 	bottom: 0;
@@ -138,11 +138,11 @@ header .title {
 }
 
 /* fix for iPad glitches */
-.themodal-overlay > * {
+.themodal-overlay > *, .thepanel-overlay > * {
 	-webkit-transform: translateZ(0px);
 }
 
-.themodal-overlay {
+.themodal-overlay, .thepanel-overlay {
 	background: rgba(0, 0, 0, 0.6);
 	/* IE6–IE8 */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = #7F000000, endColorstr = #7F000000);
