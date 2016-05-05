@@ -31,35 +31,39 @@
 
 </div>
 
-<div class="modal" id="coffee-detail" style="display: none">
-	<!-- <header id="detail-header">
-		<div class="detail-coffee">Finca Orizol, Julio Roberto Rojas</div>
-		<div class="detail-roaster">Sighglass Coffee</div>
-		<div class="detail-group">
-			<div class="group-item">
-				<i class="material-icons">local_cafe</i> <div class="group-item-method">Espresso</div>
+<div class="modal" id="coffee-detail" style="display: none"></div>
+
+<div id="add-coffee-panel" class="full-page-modal" style="display: none">
+	<div class="wrapper">
+		<form method="post" name="new-coffee" id="new-coffee" action="">
+			<div class="hero-input">
+				<input type="text" id="submission-title" name="title" value="" placeholder="Coffee name">
 			</div>
-			<div class="group-item">
-				<i class="material-icons">grain</i> <div class="group-item-method">17.3g medium coars</div>
+			<div class="detail-inputs">
+				<div class="input-group">
+					<label>Roaster</label>
+					<input type="text" id="submission-roaster" name="roaster" value="" placeholder="Roaster's name">
+					<label>Brewing method</label>
+					<input type="text" id="submission-rmethod" name="method" value="" placeholder="Select your brewing method">
+					<label>Grounds (g)</label>
+					<input type="text" id="submission-grounds" name="grounds" value="" placeholder="How many grounds?">
+					<label>Water (g)</label>
+					<input type="text" id="submission-water" name="water" value="" placeholder="How much water do you use?">
+					<label>Time</label>
+					<input type="text" id="submission-time" name="time" value="" placeholder="How long does it takes?">
+				</div>
+				<div class="coffee-note">
+					<textarea id="submission-note" name="note" placeholder="Write your note..."></textarea>
+				</div>
 			</div>
-			<div class="group-item">
-				<i class="material-icons">local_drink</i> <div class="group-item-method">150g water</div>
-			</div>
-			<div class="group-item">
-				<i class="material-icons">alarm</i> <div class="group-item-method">34 seconds</div>
-			</div>
-		</div>
-	</header>
-	<article id="detail-content">
-		<p>The Central Asociados Productores de Cafe is made up of 85 active farmers (as of 2006,) and primarily produces Typica and Caturra varieties at elevations ranging from 1,400 - 1,700 masl. The acidity of this coffee is characterized by focused apricot and nectarine stone fruit, complemented by soft graham and honey flavors. A touch of butterscotch in the finish rounds out the cup for a very rich and satisfying profile.</p>
-	</article>
-	<div id="detail-author">
-		<img src="img_profile_002.jpg" class="author-profile">
-		<div class="author-info">
-			<div class="author-name">Kevin Chang</div>
-			<div class="post-time">made on 3/14/2016</div>
-		</div>
-	</div> -->
+		</form>
+	</div>
+	<div class="modal-footer">
+		<ul class="bottom-actions">
+			<li><a id="cancel-new" class="white flat-button">Cancel</a></li>
+			<li><a id="publish-new" class="white raised-button">Publish</a></li>
+		</ul>
+	</div>
 </div>
 
 <?php get_sidebar('user-slide-out'); ?>

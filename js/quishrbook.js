@@ -47,4 +47,31 @@ jQuery(function($){
 		});
 	});
 
+	$('#add-new-coffee').click(function(e){
+		if ($(this).hasClass('become-cancel')) {
+			$('.modal-footer').animate({
+				bottom: '-64px'
+			}, 200);
+			$('#add-coffee-panel').fadeOut();
+			$('body').removeClass('themodal-lock');
+			$('#add-new-coffee').removeClass('become-cancel');
+		} else {
+			e.preventDefault();
+			$('#add-coffee-panel').fadeIn().find('.modal-footer').delay(200).animate({
+				bottom: '0'
+			}, 200);
+			$('body').addClass('themodal-lock');
+			$(this).addClass('become-cancel');
+		}
+	});
+
+	$('#cancel-new').click(function(e){
+		$('.modal-footer').animate({
+				bottom: '-64px'
+			}, 200);
+		$('#add-coffee-panel').fadeOut();
+		$('body').removeClass('themodal-lock');
+		$('#add-new-coffee').removeClass('become-cancel');
+	});
+
 });

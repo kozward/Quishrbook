@@ -15,6 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>"> 
 </head>
 <body>
+	<a id="add-new-coffee" class="fab-button"><i class="material-icons">close</i></a>
 	<header id="site-header">
 		<div id="sticky">
 			<a id="open-user-panel"><i class="material-icons">menu</i></a>
