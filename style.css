@@ -135,7 +135,7 @@ header .title {
 	left: 0;
 	top: 0;
 	right: 0;
-	z-index: 200;
+	z-index: 1000;
 
 	/* if modal content doesn't fit inside the overlay, display scrollbars */
 	overflow: auto;
@@ -236,7 +236,7 @@ header .title {
 	position: fixed;
 	top: 0;
 	left: -320px;
-	z-index: 999;
+	z-index: 1001;
 	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 }
 
@@ -487,6 +487,14 @@ input:focus {
 	text-transform: uppercase;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+.flat-button:hover {
+	background: rgba(0,0,0,.1);
+}
+
+.flat-button:active {
+	background: rgba(0,0,0,.2);
 }
 
 .white.flat-button {
