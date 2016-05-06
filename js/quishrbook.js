@@ -62,6 +62,7 @@ jQuery(function($){
 			}, 200);
 			$('body').addClass('themodal-lock');
 			$(this).addClass('become-cancel');
+			$('#submission-title').focus();
 		}
 	});
 
