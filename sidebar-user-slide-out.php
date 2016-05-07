@@ -28,9 +28,9 @@
 					}
 
 					$method_count = array_count_values($my_methods);
+					arsort($method_count);
 					$top_methods = array_slice($method_count, 0, 3);
 					$total_entry = array_sum($method_count);
-					arsort($top_methods);
 
 					foreach ($top_methods as $key => $value) {
 						echo '
